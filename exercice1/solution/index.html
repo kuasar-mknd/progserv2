@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            svg:not(:root) {
+                display: block;
+            }
+
+            .playable-code {
+                background-color: #f4f7f8;
+                border: none;
+                border-left: 6px solid #558abb;
+                border-width: medium medium medium 6px;
+                color: #4d4e53;
+                height: 100px;
+                width: 90%;
+                padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+                border: 1px solid #4d4e53;
+                border-radius: 2px;
+            }
+
+            .playable-buttons {
+                text-align: right;
+                width: 90%;
+                padding: 5px 10px 5px 26px;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            form {
+                margin: 0 auto;
+                margin-top: 25px;
+                width: 420px;
+                padding: 1em;
+                border: 1px solid #ccc;
+                border-radius: 1em;
+            }
+
+            div + div {
+                margin-top: 1em;
+            }
+
+            label span {
+                display: inline-block;
+                width: 140px;
+                text-align: left;
+            }
+
+            input {
+                font: 1em sans-serif;
+                width: 250px;
+                box-sizing: border-box;
+                border: 1px solid #999;
+            }
+
+            button {
+                margin: 20px 0 0 250px;
+            }
+
+            label {
+                position: relative;
+            } 
+        </style>
+        <title>Générateur de mots de passe</title>
+    </head>
+    <body>
+
+        <form action="traiteFormulaire.php" method="post">
+            <h1>Générateur de Mots De Passe</h1>
+            <section>
+                <p>
+                    <label for="nb1">
+                        <span>Nb cars spéciaux : </span>
+                    </label>
+                    <input type="number" id="nb1" name="tabNbrs[]" value="0" min="0" max="20" />
+                </p>
+                <p>
+                    <label for="nb2">
+                        <span>Nb chiffres : </span>
+                    </label>
+                    <input type="number" id="nb2" name="tabNbrs[]" value="0" min="0" max="20" />
+                </p>
+                <p>
+                    <label for="nb3">
+                        <span>Nb minuscules : </span>
+                    </label>
+                    <input type="number" id="nb3" name="tabNbrs[]" value="0" min="0" max="20" />
+                </p>
+                <p>
+                    <label for="nb4">
+                        <span>Nb majuscules : </span>
+                    </label>
+                    <input type="number" id="nb4" name="tabNbrs[]" value="0" min="0" max="20" />
+                </p>
+            </section>
+            <section>
+                <button type="submit">Génère mot de passe</button>
+            </section>
+        </form>
+    </body>
+</html>

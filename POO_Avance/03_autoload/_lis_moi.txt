@@ -1,0 +1,25 @@
+Cet exemple est le même que le précédent mais écrit différemment.
+
+La grand différence c'est que, dans notre nouvelle version, on peut se passer 
+des instructions :
+
+    require_once 'nomClasse1.php';
+    require_once 'nomClasse2.php';
+    require_once 'nomClasse3.php';
+    require_once 'nomClasseX.php';
+
+qui se trouvent dans chaque classe ainsi que dans le programme principal :-)
+
+Il faut "juste" ranger les choses correctement et ajouter quelques lignes dans
+le programme principal. Il s'agit d'un code permettant le chargement automatique
+des classes :
+
+// permet le chargement automatique des classes utilisées
+require_once('autoload.php');
+
+Voir le fichier autoload.php
+
+Les classes doivent être mise dans des répertoires correspondant au "namespace"
+donné à la classe. (Comme en java en fait ;-)
+
+Cela simplifie grandement le code.
