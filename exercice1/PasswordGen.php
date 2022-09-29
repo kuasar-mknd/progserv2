@@ -2,7 +2,7 @@
 require_once 'DatabasePassword.php';
 
 
-class passwordGen extends DatabasePassword
+class passwordGen
 {
     private $authorizedChars = array(
         'special' => array('(', ')', '[', ']', '{', '}', '$', '€', '_'),
@@ -10,12 +10,14 @@ class passwordGen extends DatabasePassword
         'lowercase' => array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'),
         'uppercase' => array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z')
     );
-    
+
     public function generatePassword($nbSpecial, $nbNumber, $nbLower, $nbUpper)
     {
+        $database = new DatabasePassword();
 
         if (!file_exists('passwords.sqlite')) {
-            $this->createDatabase();
+
+            $database->createDatabase();
         }
 
         $arrayPassword = array_merge($this->generateChars($nbSpecial, 'special'));
@@ -26,8 +28,8 @@ class passwordGen extends DatabasePassword
         shuffle($arrayPassword);
         $password = implode('', $arrayPassword);
 
-        if($this->checkPassword($password)) {
-            $this->insertPassword($password);
+        if($database->checkPassword($password)) {
+            $database->insertPassword($password);
             return $password;
         } else {
             return false;
