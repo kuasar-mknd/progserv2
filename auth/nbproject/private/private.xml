@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/MAMP/htdocs/auth/controllers/userActivationValidation.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/userActivation.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/dbSqliteCreateDbTable.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/Page1_unprotected.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/config/dbSqlite.ini</file>
+            <file>file:/C:/MAMP/htdocs/auth/ch/comem/DbManager.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/Page2_protected.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/config/db.ini</file>
+            <file>file:/C:/MAMP/htdocs/auth/LIS_MOI.md</file>
+            <file>file:/C:/MAMP/htdocs/auth/controllers/loginValidation.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/signup.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/controllers/_rememberOriginPage.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/header.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/controllers/signupValidation.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/login.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/css/style.css</file>
+            <file>file:/C:/MAMP/htdocs/auth/logout.php</file>
+            <file>file:/C:/MAMP/htdocs/auth/controllers/_protect.php</file>
+        </group>
+    </open-files>
+</project-private>

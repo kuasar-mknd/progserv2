@@ -1,0 +1,36 @@
+Basé sur le projet auth vu en cours
+
+1. Création d'une table SQL pour contenir la valeur superUser
+
+CREATE TABLE `superUser` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `isSuperUser` boolean NOT NULL DEFAULT '0',
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+2. Création du formulaire pour ajouter des superUsers
+    - création de l'interface superUserInterface.php pour imposer les fonctions dans le gestionnaire de BD
+    - création de la page createSuperUser.php avec le formulaire et vérification du status admin avec _protectAdmin.php
+    - traitement du formulaire dans superUserValidation.php
+    - traitement db avec le trait superUserDB.php
+
+3. Création du footer et nav pour les superUsers
+    - création de la page footerSuperUser.php pour afficher "We care about you" si l'utilisateur est un superUser
+    - création d'une page accessible que par les superUsers
+
+4. Création des pages pour vérifier les accès
+    - création de la page _protectAdmin.php pour vérifier si l'utilisateur est un admin
+    - création de la page _protectSuperUser.php pour vérifier si la variable superUser existe et
+      sinon si l'utilisateur est connecté, vérifier dans la db et le cas échant créer la variable superUser
+
+
+
+Étape pour implémenter le système de superUser
+    0. Importer la table superUser dans la db
+    1. Ajouter le trait superUserDB.php dans la classe qui se gère à la db et l'interface superUserInterface.php
+    2. Ajouter include('./controllers/_protectSuperUser.php'); dans les pages qui doivent être protégées et accessible que par les superUsers
+    3. Ajouter include('./footerSuperUser.php'); dans les footers des pages
+    4. Ajouter une variable de session isAdmin lors de la connexion d'un admin
+
+
